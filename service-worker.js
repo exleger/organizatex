@@ -1,4 +1,4 @@
-const CACHE_NAME = 'organizatex-shell-v6';
+const CACHE_NAME = 'organizatex-shell-v8';
 const APP_SHELL = ['./', './index.html', './app-enhancements.js', './income-groups.js', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', event => {

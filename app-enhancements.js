@@ -53,14 +53,14 @@ function downloadBackup() {
 
 const themeToggle = document.querySelector('#themeToggle');
 const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-let themeMode = localStorage.getItem('claro.theme') || 'system';
+let themeMode = localStorage.getItem('claro.theme') || 'dark';
 function applyTheme() {
   const dark = themeMode === 'dark' || (themeMode === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
   document.documentElement.dataset.theme = dark ? 'dark' : 'light';
   themeToggle.textContent = dark ? '☀' : '☾';
   themeToggle.title = dark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro';
   themeToggle.setAttribute('aria-label', themeToggle.title);
-  themeColorMeta.content = dark ? '#121714' : '#386b50';
+  themeColorMeta.content = dark ? '#0e1420' : '#f4f7f5';
 }
 themeToggle.addEventListener('click', () => {
   const currentlyDark = document.documentElement.dataset.theme === 'dark';
